@@ -1,0 +1,12 @@
+
+.game,
+.waiting {
+    display: none;
+}
+.js-show {
+    display: block;
+}
+
+.js-hide {
+    display: none;
+}
