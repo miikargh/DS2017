@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DS2017 Coursework</title>
+        <link rel="stylesheet" href="styles.css" async defer>
+        <script src="client.js" async defer></script>
+    </head>
+    <body>
+        <h1>DS 2017 Coursework</h1>
+
+        <div class="menu" id="menu">
+            <h2>Rules:</h2>
+            <ul>
+                <li>There are 10 cards marked from 1 to 10</li>
+                <li>There will be three players each taking turns</li>
+                <li>You have to guess if the next card is bigger or smaller</li>
+            </ul>
+            <h3>Are you ready?</h3>
+            <button id="ready">Yeah!</button>
+        </div>
+
+        <div class="waiting" id="waiting">
+            <h3>Waiting for other players...</h3>
+        </div>
+
+        <ul class="players" id="players">
+
+        </ul>
+
+        <div class="game" id="game">
+            <div class="info" id="info"></div>
+            <button class="control" data-msg="bigger" id="bigger">Bigger</button>
+            <button class="control" data-msg="smaller" id="smaller">Smaller</button>
+        </div>
+    </body>
+</html>
