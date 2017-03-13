@@ -7,3 +7,13 @@ This project is a implementation of a simple distributed system for the Distribu
 
 ## Installation
 ### Node.js
+The server requires Node.js to work. So if you don't already have Node.js installed on your computer you have to install it first.
+This can be done either using a package manager: https://nodejs.org/en/download/package-manager/
+or an installer: https://nodejs.org/en/download/
+
+### npm install
+When Node.js is installed move to the server folder and run the next command on your terminal/command line: `npm install`.
+
+This command will install the dependencies needed for the server to run.
+
+### node server
