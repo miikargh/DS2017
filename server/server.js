@@ -259,7 +259,9 @@ const onClose = function(message) {
 
     let index = state.cons.indexOf(this);
 
+
     state.disconnectCon(index);
+    broadCast("PLAYER LEFT", state.players, null);
 
     if (index === state.turn) {
         if (index === state.players.length) {
@@ -270,13 +272,11 @@ const onClose = function(message) {
     }
 
 
-    console.log(`Node ${index} disconnected.`);
+    console.log(`node ${index} disconnected`);
     if(!state.cons.length) { // All connections have disconnected
         state.reset();
         return;
     }
-
-    broadCast("PLAYER LEFT", state.players, null);
 };
 
 const onMessage = function(message) {
