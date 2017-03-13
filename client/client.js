@@ -22024,16 +22024,24 @@ const onMessage = function(event) {
             updateScoreBoard(data);
             break;
 
+        case "PLAYER LEFT":
+            info.innerHTML = "Player left the game";
+            updateScoreBoard(data);
+            break;
+
         case "CARD":
             card.innerHTML = data.card;
             break;
 
         case "GAME FULL":
+            waiting.classList.add("js-hide");
+            game.classList.add("js-show");
+            controls.forEach(c => c.classList.add("js-hide"));
             info.innerHTML = "The game is full. Please wait for the next game";
             break;
 
         default:
-            console.log("Should this ever happen?");
+            console.log("Got unknown message: " + data.message);
             break;
     }
 };
